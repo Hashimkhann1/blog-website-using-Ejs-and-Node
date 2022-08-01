@@ -1,0 +1,20 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+
+<h2>BBC News</h2>
+
+<%= homePara %>
+
+
+
+<% post.map((data) => { %>
+    <h2> <%= data.title %> </h2> 
+    <p> 
+        <%= data.content.substring(0 , 100) + " ...." %> 
+        <a href="/post/<%= data.title %>" + data.title>Read more</a>
+    </p>
+<% }) %>
+
+
+<%- include('partials/footer'); -%>
